@@ -1,16 +1,18 @@
 package com.huerta.springboot.app.item.springbootitemservice.controller;
 
-import com.huerta.springboot.app.item.springbootitemservice.models.Item;
-import com.huerta.springboot.app.item.springbootitemservice.service.ItemService;
 import java.util.List;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.connector.Response;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.huerta.springboot.app.item.springbootitemservice.models.Item;
+import com.huerta.springboot.app.item.springbootitemservice.service.ItemService;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("items")
