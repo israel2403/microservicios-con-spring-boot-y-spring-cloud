@@ -21,7 +21,10 @@ public class ItemService {
 
   public List<Item> findAll() {
     List<Product> products = Arrays.asList(
-      restClient.getForObject("http://localhost:8001/products", Product[].class)
+      restClient.getForObject(
+        "http://products-service/products",
+        Product[].class
+      )
     );
     return products
       .stream()
@@ -33,7 +36,7 @@ public class ItemService {
     final Map<String, String> pathVariables = new HashMap<>();
     pathVariables.put("id", id.toString());
     Product product = restClient.getForObject(
-      "http://localhost:8001/products/{id}",
+      "http://products-service/products/{id}",
       Product.class,
       pathVariables
     );
