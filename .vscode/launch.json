@@ -19,10 +19,19 @@
         },
         {
             "type": "java",
-            "name": "Launch SpringbootServiceProductsApplication",
+            "name": "Launch Service Products 1",
             "request": "launch",
             "mainClass": "com.huerta.springboot.app.products.springbootserviceproducts.SpringbootServiceProductsApplication",
-            "projectName": "springboot-service-products"
+            "projectName": "springboot-service-products",
+            "vmArgs": "-Dserver.port=8001"
+        },
+        {
+            "type": "java",
+            "name": "Launch Service Products 2",
+            "request": "launch",
+            "mainClass": "com.huerta.springboot.app.products.springbootserviceproducts.SpringbootServiceProductsApplication",
+            "projectName": "springboot-service-products",
+            "vmArgs": "-Dserver.port=9001"
         }
     ]
 }
