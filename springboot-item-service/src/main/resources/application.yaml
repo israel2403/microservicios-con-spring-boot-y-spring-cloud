@@ -3,3 +3,6 @@ server:
 spring:
   application:
     name: items-service
+products-service:
+  ribbon:
+    listOfServers: localhost:8001,localhost:9001

@@ -16,11 +16,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("items")
-@RequiredArgsConstructor
 @Slf4j
+@RequiredArgsConstructor
 public class ItemController {
-
-  private final ItemService itemService;
+  private final  ItemService itemService;
 
   @GetMapping
   public ResponseEntity<List<Item>> getAll() {
