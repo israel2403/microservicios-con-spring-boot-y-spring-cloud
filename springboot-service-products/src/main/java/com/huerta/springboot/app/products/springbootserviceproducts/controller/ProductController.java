@@ -1,17 +1,19 @@
 package com.huerta.springboot.app.products.springbootserviceproducts.controller;
 
-import com.huerta.springboot.app.products.springbootserviceproducts.models.entity.Product;
-import com.huerta.springboot.app.products.springbootserviceproducts.service.ProductService;
 import java.util.List;
 import java.util.stream.Collectors;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.huerta.springboot.app.products.springbootserviceproducts.models.entity.Product;
+import com.huerta.springboot.app.products.springbootserviceproducts.service.ProductService;
+
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("products")
