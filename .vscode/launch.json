@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch ItemService",
+            "request": "launch",
+            "mainClass": "com.huerta.springboot.app.item.springbootitemservice.SpringbootItemServiceApplication",
+            "projectName": "springboot-item-service"
+        },
+        {
+            "type": "java",
+            "name": "Launch EurekaServer",
+            "request": "launch",
+            "mainClass": "com.huerta.springboot.app.eureka.springbootserviceeurekaserver.SpringbootServiceEurekaServerApplication",
+            "projectName": "springboot-service-eureka-server"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProductService 1",
+            "request": "launch",
+            "mainClass": "com.huerta.springboot.app.products.springbootserviceproducts.SpringbootServiceProductsApplication",
+            "projectName": "springboot-service-products",
+            "vmArgs": "-Dserver.port=8001"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProductService 2",
+            "request": "launch",
+            "mainClass": "com.huerta.springboot.app.products.springbootserviceproducts.SpringbootServiceProductsApplication",
+            "projectName": "springboot-service-products",
+            "vmArgs": "-Dserver.port=9001"
+        }
+    ]
+}
