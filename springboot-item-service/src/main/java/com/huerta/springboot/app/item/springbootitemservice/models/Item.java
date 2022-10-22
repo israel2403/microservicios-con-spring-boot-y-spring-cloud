@@ -18,6 +18,6 @@ public class Item {
   }
 
   public Double calculateTotal() {
-    return product.getPrecio() * amount.doubleValue();
+    return product.getPrice() * amount.doubleValue();
   }
 }

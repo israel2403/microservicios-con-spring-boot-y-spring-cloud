@@ -10,7 +10,7 @@ public class Product {
 
   private Long id;
   private String name;
-  private Double precio;
+  private Double price;
   private Date createAt;
   private Integer port;
 }

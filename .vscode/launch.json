@@ -29,9 +29,9 @@
             "name": "Launch ProductService 1",
             "request": "launch",
             "mainClass": "com.huerta.springboot.app.products.springbootserviceproducts.SpringbootServiceProductsApplication",
-            "projectName": "springboot-service-products",
-            "vmArgs": "-Dserver.port=8001"
-        },
+            "projectName": "springboot-service-products",/* 
+            "vmArgs": "-Dserver.port=8001" */
+        }/* ,
         {
             "type": "java",
             "name": "Launch ProductService 2",
@@ -39,6 +39,6 @@
             "mainClass": "com.huerta.springboot.app.products.springbootserviceproducts.SpringbootServiceProductsApplication",
             "projectName": "springboot-service-products",
             "vmArgs": "-Dserver.port=9001"
-        }
+        } */
     ]
 }
