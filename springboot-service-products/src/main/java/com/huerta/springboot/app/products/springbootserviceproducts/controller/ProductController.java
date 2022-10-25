@@ -5,7 +5,6 @@ import com.huerta.springboot.app.products.springbootserviceproducts.service.Prod
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,14 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("products")
 @RequiredArgsConstructor
 public class ProductController {
-    private final ServletWebServerApplicationContext webServerAppCtxt;
+
+  private final ServletWebServerApplicationContext webServerAppCtxt;
 
   private final ProductService productService;
-
-  // private final Environment environment;
-
- /*  @Value("{server.port}")
-  private Integer port; */
 
   @GetMapping
   public ResponseEntity<List<Product>> list() {
@@ -33,9 +28,6 @@ public class ProductController {
         .stream()
         .map(
           product -> {
-            /* product.setPort(
-              Integer.parseInt(environment.getProperty("local.server.port"))
-            ); */
             product.setPort(webServerAppCtxt.getWebServer().getPort());
             return product;
           }
@@ -47,10 +39,8 @@ public class ProductController {
   @GetMapping("{id}")
   public ResponseEntity<Product> detail(@PathVariable final Long id) {
     final Product product = this.productService.findById(id);
-    /* product.setPort(
-      Integer.parseInt(environment.getProperty("local.server.port"))
-    ); */
     product.setPort(webServerAppCtxt.getWebServer().getPort());
+
     return ResponseEntity.ok(product);
   }
 }
