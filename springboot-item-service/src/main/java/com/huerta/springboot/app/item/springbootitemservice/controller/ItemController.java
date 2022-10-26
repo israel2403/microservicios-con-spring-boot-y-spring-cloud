@@ -29,7 +29,7 @@ public class ItemController {
     return ResponseEntity.ok(findAll);
   }
 
-  @HystrixCommand(fallbackMethod = "alternativeMethod")
+  // @HystrixCommand(fallbackMethod = "alternativeMethod")
   @GetMapping("{id}/amount/{amount}")
   public ResponseEntity<Item> getByProductIdandItemAmount(
     @PathVariable final Long id,

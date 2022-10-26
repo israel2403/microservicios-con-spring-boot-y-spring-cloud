@@ -40,7 +40,11 @@ public class ProductController {
   public ResponseEntity<Product> detail(@PathVariable final Long id) {
     final Product product = this.productService.findById(id);
     product.setPort(webServerAppCtxt.getWebServer().getPort());
-
+   /*  try {
+      Thread.sleep(2000L);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    } */
     return ResponseEntity.ok(product);
   }
 }
