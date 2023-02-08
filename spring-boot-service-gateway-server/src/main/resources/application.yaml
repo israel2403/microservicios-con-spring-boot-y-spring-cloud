@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: service-gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: products-service
+          uri: lb://products-service
+          predicates:
+            - Path=/products-api/**
+          filters:
+            - StripPrefix=1
+        - id: items-service
+          uri: lb://items-service
+          predicates:
+            - Path=/items-api/**
+          filters:
+            - StripPrefix=1
+
+server:
+  port: 8090
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
